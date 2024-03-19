@@ -5,9 +5,7 @@
 <!-- default badges end -->
 # Reporting for WinForms - Use XRCrossTab Control to Create Cross-Tab Report in Code
 
-
 This example uses the [Cross Tab](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRCrossTab) control to generate a [cross-tab report](https://docs.devexpress.com/XtraReports/4226/create-reports/create-a-cross-tab-report) in code.
-
 
 ![Cross-Tab Report](Images/screenshot.png)
 
