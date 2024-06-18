@@ -1,3 +1,4 @@
+#region usings
 using DevExpress.DataAccess.ConnectionParameters;
 using DevExpress.DataAccess.Sql;
 using DevExpress.XtraPrinting;
@@ -6,6 +7,7 @@ using DevExpress.XtraReports.UI.CrossTab;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+#endregion
 
 namespace CrossTabReportSample
 {
@@ -24,6 +26,7 @@ namespace CrossTabReportSample
             }
         }
 
+        #region ReportGenerationCode1
         private XtraReport CreateReport() {
             // Creates a blank report.
             XtraReport crossTabReport = new XtraReport() {
@@ -67,6 +70,7 @@ namespace CrossTabReportSample
             crossTab.DataFields.Add(new CrossTabDataField() { FieldName = "Quantity" });
             crossTab.DataFields.Add(new CrossTabDataField() { FieldName = "ExtendedPrice" });
             crossTab.GenerateLayout();
+			#endregion
             /*
             +----------------+---------------+-------------------------------+---------------------------+---------------------------+
             | Category Name  | Product Name  | [Country]                     | Total [Country]           | Grand total               |
@@ -82,6 +86,7 @@ namespace CrossTabReportSample
             | Grand Total                    |            |                  |          |                |          |                |
             +--------------------------------+------------+------------------+----------+----------------+----------+----------------+
             */
+            #region ReportGenerationCode2
             // Adjusts the generated cells.
             foreach(var c in crossTab.ColumnDefinitions) {
                 // Enables auto-width for all columns.
@@ -112,8 +117,6 @@ namespace CrossTabReportSample
             };
             return crossTabReport;
         }
+        #endregion
     }
 }
-
-
-
